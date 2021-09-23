@@ -1,0 +1,64 @@
+@import './variables';
+
+.h1-gifos{
+    font-family: $tipografiaMonserratBold;
+    color:$violeta;
+    font-size: 20px;
+    text-align: center;
+    body.dark &{
+        color:$blanco
+    }
+}
+.contenedorIconoGifos{
+    display: flex;
+    justify-content: center;
+}
+.div-gifo{
+    background-color: lightgray;
+    height: 200px;
+    width: 200px;
+    margin:auto;
+}
+.cont-gifos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    height: 100%;
+    margin-top: 30px;
+}
+.h3-misGifos-vacios{
+    font-size: 14px;
+    color:$verde;
+    margin-top: 20px; 
+    margin-bottom: 50px;
+}
+.misGifos-vacios-box{
+    margin-bottom: 30px;
+    text-align: center;
+}
+@media (min-width:860px){
+    .h1-gifos{
+        font-size: 25px;
+        body.dark &{
+            color:$blanco
+        }
+        
+    }
+    .cont-gifos{
+        margin: auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 20px;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .misGifos-vacios-box{
+        margin-top: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+}

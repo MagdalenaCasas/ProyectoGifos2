@@ -1,0 +1,35 @@
+@import './home';
+@import './variables';
+@import './header';
+@import  './footer';
+@import './favoritos';
+@import  './trendingsFunciona';
+@import './misGifos';
+@import  './camara';
+@import  './buscadorNav';
+@import  './buscador';
+@import  './displayNone';
+@import  './popup';
+
+
+
+*{  margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color:  #572EE5;
+}
+.linea-violeta{
+    height: 5px;
+    width: 100%;
+    background-color: #572EE5;
+    margin-top: -1px;
+    body.dark &{
+        background: black;
+    }
+
+}
+
+

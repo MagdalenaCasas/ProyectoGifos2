@@ -1,0 +1,279 @@
+@import './variables';
+
+.trending-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $gris;
+    margin-top: 20px;
+    height: auto; 
+    body.dark &{
+       background: $backgroundModoOscuro2;
+    }
+}
+.trending-h1{
+    color: $violeta;
+    font-family: $tipografiaMonserratBold;  
+    margin-top: 10px;
+    body.dark &{
+        color:$blanco;
+    }
+}
+
+.p-mobile{
+    line-height: 0;
+    margin-top: 20px;
+    color: $negro;
+    font-family: $tipografiaRobotoRegular;
+}
+.p-completo{
+    display: none;
+}
+.ContenedorTotalCarrusel{
+    padding: 20px 0;
+    margin:10px;
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 1fr;
+    
+}
+.contcarousel{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.carousel{
+    min-width: 33%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.resultTrending{
+    width: 300px;
+    height: 275px;
+    margin-left: 20px;  
+}
+
+.botonDerecha {
+    grid-column: 3/3;
+    align-self: center;
+    justify-self: flex-start;
+}
+.botonIzq{
+   align-self: center;
+   justify-self: flex-end;
+}
+
+// card es variable fig que contiene img y overlay
+    
+.card{
+    position:relative;
+    margin: 0 15px;
+    max-width: 357px;
+    max-height: 275px;
+}
+.card:hover .overlay {
+   opacity: 0.7;
+}
+.imgGifTrending{
+    width: 357px;
+    height: 275px;
+}
+  // ---------------CARD VIOLETA-----------
+ .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 275px;
+    width: 357px;
+    opacity: 0;
+    background-color:$violeta;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+// boton de la cards violeta
+.pointer{
+    background: $violeta;
+    border:none;
+    opacity: 0.7;
+    margin: 5px;
+}
+//div con los datos user y title y card user es el nombre del usuario
+  
+.gif-caption{
+ color:$blanco;
+ text-align:left;
+ padding-left: 1rem;
+ padding-right: 1rem;
+}
+  
+.card-user{
+ color:$blanco;
+ text-align:left;
+ font-family: $tipografiaRobotoRegular;
+ font-size: 15px;
+ margin-left:0px;
+ margin-bottom:0;
+}
+  
+.subtitulo-5{
+ font-family: $tipografiaRobotoRegular;
+ font-size: 16px;
+ margin-top:5px;
+}
+  
+.card-icons{
+ display:flex;
+ flex-direction:row;
+ justify-content:flex-end;
+ opacity: 1;
+}
+  
+.icon{
+ margin-top: 10px;
+}
+    
+
+
+
+
+
+
+
+
+@media (min-width:700px){
+    .p-mobile{
+        display: none;
+    }
+    .p-completo{
+        display: block;
+        color: $negro;
+        font-family: $tipografiaRobotoRegular;
+        font-size: 18px;
+        margin-top: 5px;
+        body.dark &{
+            color:$blanco;}
+        }
+   
+    // carrusel
+    .ContenedorTotalCarrusel{
+        padding: 20px 0;
+        margin:10px;
+        width: 100%;
+        height: 600px;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 1fr;
+        
+    }
+    .botonDerecha {
+        grid-column: 3/3;
+        align-self: center;
+        justify-self: flex-start;
+    }
+    .botonIzq{
+       align-self: center;
+       justify-self: flex-end;
+    }
+
+     // contenedor de contenedor
+    .ventana-gifs{
+        overflow: hidden;
+        scroll-behavior: smooth;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    //contenedor de img gifs y card violeta
+    .carousel{
+        overflow: hidden;
+        scroll-behavior: smooth;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    // card es variable fig que contiene img y overlay
+    
+    .card{
+        position:relative;
+        margin: 0 15px;
+        max-width: 357px;
+        max-height: 275px;
+    }
+    .card:hover .overlay {
+       opacity: 0.7;
+    }
+    .imgGifTrending{
+        width: 357px;
+        height: 275px;
+    }
+
+     // ---------------CARD VIOLETA-----------
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 275px;
+      width: 357px;
+      opacity: 0;
+      background-color:$violeta;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+     }
+     // boton de la cards violeta
+    .pointer{
+        background: $violeta;
+        border:none;
+        opacity: 0.7;
+        margin: 5px;
+    }
+    //div con los datos user y title y card user es el nombre del usuario
+
+    .gif-caption{
+     color:$blanco;
+     text-align:left;
+     padding-left: 1rem;
+     padding-right: 1rem;
+    }
+
+    .card-user{
+     color:$blanco;
+     text-align:left;
+     font-family: $tipografiaRobotoRegular;
+     font-size: 15px;
+     margin-left:0px;
+     margin-bottom:0;
+    }
+
+    .subtitulo-5{
+     font-family: $tipografiaRobotoRegular;
+     font-size: 16px;
+     margin-top:5px;
+    }
+
+    .card-icons{
+     display:flex;
+     flex-direction:row;
+     justify-content:flex-end;
+     opacity: 1;
+    }
+
+    .icon{
+      margin-top: 10px;
+    }
+
+}
+    

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/70745d5714.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sass/style.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <header>
+        <div class="linea-violeta"></div>
+        <div clas= "contenedor-logo">
+
+            <a href="./index.html">
+                
+                <img class="modonoc logo modonoc" id="logo-mobile" src="./assets/logo-mobile.svg" alt="logo" srcset=""> 
+            </a>
+           
+
+        </div>
+        <nav id="site-nav" class="site-nav">
+            
+            <ul>
+                <li>
+                    <a href="#" id="modoNocturno">MODO NOCTURNO</a>
+                    <div class="linea-blanca"></div>
+                </li>
+                <li>
+                    <a href="./favoritos.html">FAVORITOS</a>
+                    <div class="linea-blanca"></div>
+                </li>
+                <li>
+                    <a href="./misGifos.html">MIS GIFOS</a>
+                    <div class="linea-blanca"></div>
+                </li>
+            </ul>
+            
+            
+            <div>
+                <img class="crear_gifo modonoc" id="button-crear-gifo" src="./assets/button-crear-gifo.svg" alt="Crear_Gif">
+    
+            </div>
+        </nav>
+        <div class = "menu-toggle" id="menu-toggle" onclick = cambiarClase()>
+            <div class="hamburguesa"></div>
+        </div>
+        
+    </header>
+    <div class='crear-gif'>
+        <div class='contenedor'>
+            <div class='camara-grabando'>
+                <div class="camara">
+                    <img src="./assets/camara.svg" alt="camara" id="camara" class='modonoc'>
+                    <img src="./assets/element-luz-camara.svg" alt="luz-camara" id="element-luz-camara"class='luz-camara-svg'>
+                </div>
+            </div>
+            <div class='camara-botones-timer'>
+                <div class='camara-contenedor'>
+                    <div class='esquinas'>
+                        <div class='esquina arriba-izq'></div>
+                        <div class='esquina abajo-izq'></div>
+                    </div>
+                    
+
+                    
+                    <div class='camara-video'>
+                        <div class='crear-paso1'>
+                            <div class='crear-titulo-container'>
+                                <h1 class='crear-titulo'>Aquí podrás</h1>
+                                <h1 class='crear-titulo'>crear tus propios <span class='crear-titulo-span'>GIFOS</span></h1>
+                            </div>
+                            <div class='description-container'>
+                                <p>¡Crea tu GIFO en sólo 3 pasos!</p> 
+                                <p>(sólo necesitas una cámara para grabar un video)</p>
+                            </div>
+                        </div>
+                        <div class='crear-paso2'>
+                            <div class='crear-titulo-container'>
+                                <h1 class='crear-titulo'>¿Nos das acceso</h1>
+                                <h1 class='crear-titulo'>a tu cámara?</h1>
+                            </div>
+                            <div class='description-container'>
+                                <p>El acceso a tu camara será válido sólo</p> 
+                                <p>por el tiempo en el que estés creando el GIFO.</p>
+                            </div>
+                        </div>
+                        <div class='video-cont'>
+                            <video class='video-rec'></video>
+                            <div class='loader-cont'>
+                                <div class='loader'>
+                                    <div class='img-container'>
+                                        <img src="./assets/loader.svg" alt="loader" class='loader-img'>
+                                    </div>
+                                    <h2 class='loader-text'>Estamos subiendo tu GIFO</h2>
+                                </div>
+                                
+                                <div class='success'>
+                                    <div class='img-container'>
+                                        <img src="./assets/ok.svg" alt="success signal" class='success-img'>
+                                    </div>
+                                    <h2 class='success-text'>GIFO subido con éxito</h2>
+                                </div>
+                                <div class='download-cont'>
+                                    <button class='pointer'>
+                                        <img src="./assets/icon-download-normal.svg" alt="download icon" class='icon svg-hover download-btn'>
+                                    </button>
+                                    <button class='pointer'>
+                                        <img src="./assets/icon-link-normal.svg" alt="download icon" class='icon svg-hover download-btn'>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+               
+                    <div class='esquinas'>
+                        <div class='esquina arriba-der'></div>
+                        <div class='esquina abajo-der'></div>
+                    </div>
+                </div>
+                <div class='botones-timer'>
+                    <div class='botones-contenedor'>
+                        <div class='boton'><button class='paso' id='paso1'>1</button></div>
+                        <div class='boton'><button class='paso' id='paso2'>2</button></div>
+                        <div class='boton'><button class='paso' id='paso3'>3</button></div>
+                    </div>
+                    <div class="timer">00:00:00</div>
+                    <div class="repetir-cont">
+                        <a href='#' class='repetir'>REPETIR CAPTURA</a>
+                        <div class='repetir-underline'></div>
+                    </div>
+                </div>
+            </div>
+            <div class='pelicula'>
+                <div class="cinta">
+                    <img src="./assets/pelicula.svg" alt="pelicula" id="pelicula" class="modonoc">
+                </div>
+            </div>
+        </div>
+
+        <div class='separador-camara'></div>
+        
+        <div class='boton-start-cont'>
+            <button class='boton-start plantilla '>COMENZAR</button>
+            <button class='boton-grabar plantilla disp-none'>GRABAR</button>
+            <button class='boton-finalizar plantilla disp-none '>FINALIZAR</button>
+            <button class='boton-subir plantilla disp-none'>SUBIR GIFO</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class='contact-container-desk'>
+            <p class='footer-p'>Compartir en:</p>
+            <div class="contact-container">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f icon-footer"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter icon-footer"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram icon-footer"></i></a>
+            </div>
+        </div>
+     <!--    <p class='footer-p-c'>© GIFOS 2021 All Rights Reserved.</p> -->
+    </footer>
+    <script src="./javaScript/script-menuModoNoct.js"></script>
+    <script src="./javaScript/icons-hover-script.js"></script>
+    <script src="./javaScript/icons-active-script.js"></script>
+    <script src="./javaScript/crear-gif.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/70745d5714.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Proyecto en curso</title>
+</head>
+<body id="body">
+    <header>
+        <div class="linea-violeta"></div>
+        <div clas= "contenedor-logo">
+            <a href="./index.html">
+                
+                <img class="logo modonoc" id="logo-mobile" src="./assets/logo-mobile.svg" alt="logo" srcset=""> 
+            </a>
+
+        </div>
+        <div class="nav-search-box">
+            <div class="nav-search-box-grid">
+                <button class="nav-search-button-grey">
+                    <img src="./assets/icon-search-modo-noc.svg" alt="icon search" class='icon-search-result'>
+                </button>
+                <input type="text" name="search" id="nav-search"  class="nav-search-box-input"  placeholder='Busca GIFOS y más' autocomplete="off">
+                <button class="nav-search-button"><img src="./assets/icon-search.svg" alt="icon search" id = "icon-search" class='svg-dark-mode modonoc'></button>
+                <button class="nav-search-button nav-cancel-search"><img src="./assets/close.svg" alt="icon search" id= "close" class='svg-dark-mode modonoc'></button>
+            </div>
+            <div class="contResultsAutocomplete"></div>
+        </div>
+        <nav id="site-nav" class="site-nav">
+            
+            <ul>
+                <li>
+                    <a href="#" id="modoNocturno">MODO NOCTURNO</a>
+                    <div class="linea-blanca"></div>
+                </li>
+                <li>
+                    <a href="./favoritos.html">FAVORITOS</a>
+                    <div class="linea-blanca"></div>
+                </li>
+                <li>
+                    <a href="./misGifos.html">MIS GIFOS</a>
+                    <div class="linea-blanca"></div>
+                </li>
+            </ul>
+            
+            
+            <div>
+                <a href="./camara.html">
+                    
+                    <img class="crear_gifo modonoc" id="button-crear-gifo" src="./assets/button-crear-gifo.svg" alt="Crear_Gif">
+                </a>
+                
+            </div>
+        </nav>
+        <div class = "menu-toggle" id="menu-toggle" onclick = cambiarClase()>
+            <div class="hamburguesa"></div>
+        </div>
+        
+    </header>
+
+    <main>
+
+        <section class= "seccion-imagen">
+            <div class="contenedor-titulo">
+               
+                <h1 class="titulo">Inspírate, busca, guarda, y crea los mejores <span class="GIFOS">GIFOS</span></h1>
+            </div>
+            <img class="img-main" src="assets/ilustra_header.svg" alt="">
+          
+            <div>
+
+                <div class="search-box">
+                    <div class="search-box-grid">
+                        <button class="search-button-grey">
+                            <img id="iconSearchLeft" src="./assets/icon-search-modo-noc.svg" alt="icon search" class='icon-search-result'>
+                        </button>
+                        <input type="text" name="search" id="search"  class="nav-search-box-input"  placeholder='Busca GIFOS y más' autocomplete="off">
+                        <button class="search-button modonoc" id = "iconSearch"><img id = "icon-search-main" src="./assets/icon-search-main.svg" alt="icon search" class='svg-dark-mode modonoc'></button>
+                        <button class="search-button cancel-search modonoc"><img src="./assets/close.svg" alt="icon search" id = "close" class='svg-dark-mode modonoc'></button>
+                    </div>
+                    <div class="contenedorSugerencia"> <ul class = "ulInput"></ul></div>
+                </div>
+
+
+                <section class="busqueda">
+                    <h2 class="h2-busqueda">Trending:</h2>
+                   <div class= "trending-tags"></div>
+                    <div class="separador"></div>
+                </section>
+
+                <div>
+                    
+                    <h2 id="h2-titulo-results" class="h2-titulo-results"></h2>
+                </div>
+                
+                <div id="resultsSearch" class="resultsSearch">
+                    
+                    <!-- CONTENEDOR DE LOS GIF BUSCADO -->
+
+                            <!-- <div class = "cardSearch">
+                               <img class ="imgGifSearch" src="" alt="">
+                               <div class= "overlaySearch">
+                                   <div class="card-icons">   
+                                       <button class="pointer"><img class="svg-hover svg-active iconCardSearch'" src="" alt=""></button>
+                                       <button class="pointer"><img class="svg-hover svg-active iconCardSearch'" src="" alt=""></button>
+                                       <button class="pointer"><img class="svg-hover svg-active iconCardSearch'" src="" alt=""></button>
+                                   </div>    
+                                    <div class="gif-caption">
+                                        <h5 class="subtitulo-5"></h5>
+                                        <p class="card-user"></p>
+                                    </div>
+                                </div>
+            
+                            </div>-->
+                 
+                
+                </div>
+
+                <div class="botonVerMas btnComenzar" id="btnVerMas"><a class="link-boton" href=""> VER MAS</a></div>
+
+            </div>
+        </section>
+
+        <section class="no-results-box">
+            
+            <div class="no-results">
+                <img src="./assets/icon-busqueda-sin-resultado.svg" alt="">
+                <h3 class="noResultsh3">Intenta con otra búsqueda.</h3>
+
+            </div>
+
+        </section>
+  
+
+        <section class="trending-contenedor">
+            <h1 class= "trending-h1">Trending GIFOS</h1>
+            <p class="p-mobile">Mira los últimos </p>
+            <p class="p-mobile">GIFOS de nuestra comunidad.</p>
+            <p class="p-completo">Mira los ultimos GIFOS de nuestra comunidad.</p>
+
+            <div class="ContenedorTotalCarrusel">
+                
+                <img id="button-slider-left" class=" botonIzq modonoc" src="./assets/button-slider-left.svg" alt="">
+
+
+                <div class='ventana-gifs contcarousel'>
+                    <div class='contenedor-gifs carousel'>
+
+
+                       <!-- <div class = "fig card card-other">
+                               <img class ="imgGifTrending" src="" alt="">
+                               <div class= "overlay">
+                                   <div class="card-icons">   
+                                       <button class="pointer"><img class="svg-hover svg-active icon" src="" alt=""></button>
+                                       <button class="pointer"><img class="svg-hover svg-active icon" src="" alt=""></button>
+                                       <button class="pointer"><img class="svg-hover svg-active icon" src="" alt=""></button>
+                                   </div>    
+                                    <div class="gif-caption">
+                                        <h5 class="subtitulo-5"></h5>
+                                        <p class="card-user"></p>
+                                    </div>
+                                </div>
+            
+            
+            
+                            </div>-->
+
+                    </div>
+                </div>
+
+
+                <img id = "button-slider-right" class="botonDerecha modonoc" src="./assets/button-slider-right.svg" alt="">
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class='contact-container-desk'>
+            <p class='footer-p'>Compartir en:</p>
+            <div class="contact-container">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f icon-footer"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter icon-footer"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram icon-footer"></i></a>
+            </div>
+        </div>
+        <p class='footer-p-c'>© GIFOS 2021 All Rights Reserved.</p>
+    </footer>
+    <script src="./javaScript/script-menuModoNoct.js"></script>
+    <script src="./javaScript/scriptTrending.js"></script>
+    <script src="./javaScript/cargarGif.js"></script>
+    <script src="./javaScript/apiSearch.js"></script>
+    <script src="./javaScript/icons-active-script.js"></script>
+    <script src="./javaScript/icons-hover-script.js"></script>
+    <script src="./javaScript/autocomplete.js"></script>
+    <script src="./javaScript/apiSearchNav.js"></script>
+   <!--  <script src="./javaScript/favs.js"></script> -->
+    
+    
+   <!--  <script src="./javaScript/trendings.js"></script> -->
+</body>
+</html>

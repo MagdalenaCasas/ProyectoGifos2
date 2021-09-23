@@ -1,0 +1,318 @@
+
+@import './variables';
+
+.crear-gif{
+    width: 100%;
+    height: 80vh;
+    padding-top: 95px;
+}
+.contenedor{
+    height: 465px;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-top: 4px;
+}
+
+.camara-grabando{
+    width: 200px;
+    height: 200px;
+    align-self:center;
+    margin-bottom: 75px;
+}
+.camara{
+    display: flex;
+}
+.camara-contenedor{
+    width: 690px;
+    height: 350px;
+    justify-self:center;
+    padding: 20px;
+    display:flex;
+    justify-content:space-between;
+    border: 1px solid $violeta;
+}
+.pelicula{
+    width: 200px;
+    height: 100px;
+    align-self:flex-end;
+
+}
+.esquinas{
+    height:100%;
+    width: 25px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.esquina{
+    width: 25px;
+    height: 27px;
+}
+
+.arriba-izq{
+    border-top: 1px solid $verde;
+    border-left: 1px solid $verde;
+}
+
+.abajo-izq{
+    border-bottom: 1px solid $verde;
+    border-left:1px solid $verde;
+}
+.arriba-der{
+    border-top: 1px solid $verde;
+    border-right: 1px solid $verde;
+}
+
+.abajo-der{
+    border-bottom: 1px solid $verde;
+    border-right: 1px solid $verde;
+}
+.camara-video{
+    width: 80%;
+    height: 50%;
+    align-self:center;
+    position:relative;
+    margin-bottom: 160px;
+    //background:rgba(0,0,0,0.5);
+    //opacity:;
+}
+
+.camara-botones-timer{
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.botones-contenedor{
+    grid-column: 2/3;
+    display:flex;
+    justify-content:center;
+}
+
+.botones-timer{
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.boton{
+    width:32px;
+    height: 32px;
+    margin: 13px;  
+}
+
+.paso{
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: $violeta;
+    text-align:center;
+    border-radius: 50%;
+    border: 1px solid $violeta;
+    height: 100%;
+    width: 100%;
+    background:none;
+    body.dark &{
+        color:$blanco;
+        border: 1px solid $blanco;
+    }
+}
+.paso1,
+.paso2,
+.paso3
+{
+    background: $violeta;
+    color:$blanco;
+}
+.separador-camara{
+    width: 65vw;
+    height: 6.9px;
+    background: $violeta;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 25px;
+}
+
+.boton-start-cont{
+    margin: 20px auto 26px auto;
+    display:flex;
+  
+}   
+.plantilla{
+    background-color: transparent;
+    width: 127px;
+    height: 50px;
+    border: 1px solid $violeta;
+    margin: 20px auto 26px auto;
+    border-radius: 25px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: $violeta;
+    letter-spacing: 0;
+    text-align: center;
+    z-index: 5;
+    body.dark &{
+        color:$blanco;
+        border: 1px solid $blanco;
+    }
+}
+.plantilla:hover{
+    background-color: $violeta;
+    color: $blanco;
+
+}
+.disp-none{
+    display: none;
+}
+.crear-titulo-container{
+    margin-top:80px;
+}
+
+.crear-titulo{
+    font-family: 'Montserrat';
+    font-size: 25px;
+    color: $violeta;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom:0;
+    margin-top:0;
+    body.dark &{
+        color: $blanco;
+    }
+}
+.crear-titulo-span{
+    color: $verde;
+    text-align: center;
+}
+
+p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: $negro;
+    text-align: center;
+    line-height: 29px;
+    margin-bottom:0;
+    margin-top:0;
+}
+.crear-paso2
+,.crear-paso3{
+    display:none;
+}
+
+// mientras graba
+.timer{
+    align-self:center;
+    justify-self:flex-end;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    color: $violeta;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+    display:none;
+    body.dark &{
+        color:$blanco;
+    }
+}
+
+.repetir-cont{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.repetir{
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: $violeta;
+    letter-spacing: 0;
+    text-align: center;
+    text-decoration:none;
+    position:relative;
+    display:none;
+    body.dark &{
+        color:$blanco;
+    }
+}
+
+
+.repetir::before{
+    content: '';
+    height: 2px;
+    left:0;
+    right:0;
+    position:absolute;
+    top:1.5em;
+    background: $verde;
+    border-radius: 100vh;
+    display:none;
+}
+
+.repetir:hover::before{
+    display:block;
+}
+
+.video-rec{
+    width: 100%;
+    height: 315px;
+    object-fit: cover;
+}
+
+.loader-cont{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(86, 46, 229, 0.486);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    height: 45vh;
+}
+
+.img-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.loader-text,
+.loader-img,
+.success-text,
+.success-img
+{   
+    display:none;
+}
+
+
+.loader-text
+,.success-text
+{
+    font-family: 'Montserrat';
+    font-size: 15px;
+    color: $blanco;
+    text-align: center;
+}
+
+.download-cont{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    display:none;
+}
+
+.download-cont > button{
+    right:0;
+    position:absolute;
+    margin: 10px;
+}
+
+@media screen and (min-width: 768px){
+    .crear-gif{
+        padding-top: 105px;
+    }
+}

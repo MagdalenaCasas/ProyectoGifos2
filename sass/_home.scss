@@ -1,0 +1,247 @@
+@import './variables';
+
+body{
+    background: $blanco;
+    &.dark{
+        background: $backgroundModoOscuro;
+    }
+}
+// -----------SECCION BUSCADOR CON IMAGEN MOBILE---------------
+.contenedor-titulo{
+    width: 286px;
+    height: auto;
+    margin: auto;
+}
+.seccion-imagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+.img-main{
+    width: 273px;
+    height: 130px;
+    align-self: center;
+}
+
+
+.titulo{
+   font-family: $tipografiaMonserratBold;
+   font-size: 25px;
+   color: $violeta;
+   text-align: center;
+   line-height: 33px;
+   width: 100%;
+   margin: auto;
+   body.dark &{
+   color:$blanco;
+}
+
+}
+.GIFOS{
+    color: #50E3C2;
+}
+.separador{
+    height: 1px;
+    width: 30%;
+    background-color: $grisOscuro;
+    margin: auto;
+    display: none;
+}
+
+// RESULTADOS DE LA BUSQUEDA
+.h2-titulo-results{
+    font-family: $tipografiaMonserratBold;
+    font-size: 24px;
+   text-align: center;
+    color: $violeta;
+    text-transform: capitalize;
+    margin-top: 70px;
+    body.dark &{
+        color: $blanco; 
+    }
+}
+.resultsSearch{ 
+    margin:auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    height: 100%;
+    margin-top: 30px;
+}
+
+
+.imgGifSearch{
+    width: 156px;
+    height: 120px;
+}
+.overlaySearch{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 156px;
+    height: 120px;
+    opacity: 0;
+    background-color:$violeta;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.iconCardSearch{
+    margin-top: 5px;
+}
+.cardSearch{
+    position:relative;
+    margin: 0 15px;
+    width: 156px;
+    height: 120px;
+}
+.cardSearch:hover .overlaySearch{
+    opacity: 0.7;
+ }
+
+.searchForm{
+    width: 100%;
+}
+.input-busqueda{
+    width: 215px;
+    padding-top: 20px;
+}
+
+
+
+// ------------------------------MEDIA QUERY DEL BUSCADOR ----------------------------
+@media (min-width:700px){
+
+
+    .img-main{
+        width: 399px;
+        height: 190px;
+        align-self: center;
+    }
+    .titulo{
+        font-size: 35px;
+        width: 60%;
+
+    }
+    .contenedor-titulo{
+        width: 90%;
+        height: auto;
+    }
+    .buscador{
+        background: $blanco;
+        border: 1px solid $violeta;
+        border-radius: 27px;
+        border-radius: 27px;
+        height: 50px;
+        width: 551px;
+        display: flex;
+        justify-content: flex-end;
+        margin: auto;
+    
+    }
+    .searchForm{
+        width: 100%;
+    }
+    .input-busqueda{
+        width: 450px;
+        padding-top: 20px;
+    }
+ 
+ // RESULTADOS DE LA BUSQUEDA
+    .resultsSearch{ 
+        margin:auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 20px;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .imgGifSearch{
+        width: 260px;
+        height: 200px;
+    }
+    .overlaySearch{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 260px;
+        height: 200px;
+        opacity: 0;
+        background-color:$violeta;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+    }
+    .iconCardSearch{
+        margin-top: 5px;
+    }
+    .cardSearch{
+        position:relative;
+        margin: 0 15px;
+        width: 260px;
+        height: 200px;
+    }
+    .cardSearch:hover .overlaySearch{
+        opacity: 0.7;
+     }
+  
+
+}
+
+
+
+// -------------------TEXTO ABAJO DEL BUSCADOR--------------
+
+.h2Texto{
+    color: $violeta;
+    font-family: $tipografiaMonserratBold;
+    text-align: center;
+}
+.busqueda h2,p{
+    color: $violeta;
+    font-family: $tipografiaMonserratBold;
+    body.dark &{
+        color:$blanco;
+    }
+}
+.busqueda p{
+    color: $violeta;
+    font-family: $tipografiaMonserratMedium;
+    body.dark &{
+        color:$blanco;
+    }
+}
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.p-busqueda{
+    width: 50%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    
+}
+@media (min-width:700px){
+    .p-busqueda{
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .h2-busqueda{
+        font-size: 18px;
+        color: black;
+    }
+}
+
