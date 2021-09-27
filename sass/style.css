@@ -503,7 +503,7 @@ body.dark .linea-blanca {
 
 @media (min-width: 1000px) {
   .nav-search-box {
-    display: block;
+    display: none;
   }
 }
 
@@ -1172,10 +1172,8 @@ body.dark .search-link {
     display: -ms-flexbox;
     display: flex;
     margin-top: 20px;
-    font-size: 24px;
     width: 100%;
   }
-
   .search-link {
     margin-left: 10px;
     margin-bottom: 30px;
