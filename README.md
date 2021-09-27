@@ -1,2 +1,2 @@
 # ProyectoGifos2
- proyecto revisado
+ Segundo Proyecto del curso Acamica utilizando sólo css, HTML y JavaScript. 
