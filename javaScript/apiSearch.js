@@ -10,6 +10,7 @@ const separador = document.querySelector(".separador");
 let paginador = 1;
 let busquedaNav =false; 
 let busqueda =false; 
+let busquedaTags = false;
 searchBtn.addEventListener("click", showGifs);
 let trendingSearches = document.querySelector('.trending-tags');
 
@@ -19,6 +20,7 @@ async function showGifsNav() {
     resultsSearch.innerHTML = "";
     busquedaNav =true;
     busqueda =false; 
+    budquedaTags = false;
     await searchN();
     //btnVerMAs.style.display = "flex";
 
@@ -32,10 +34,12 @@ async function showGifs(titulo) {
     resultsSearch.innerHTML = "";
     busquedaNav =false;
     busqueda =true; 
+    budquedaTags = false;
     await search();
     //btnVerMAs.style.display = "flex";
 
 }
+
 
 
 btnVerMAs.addEventListener("mouseover", (e) => {
@@ -54,15 +58,19 @@ btnVerMAs.addEventListener("mouseout", (e) => {
 })
 
 btnVerMAs.addEventListener("click", async (e) => {
+    console.log("apretaste el boton")
     paginador++;
    
     if(busqueda){
+        console.log("adentro de buscador")
          await search();
      }
 
      if(busquedaNav){
+         console.log("adentro de buscador nav")
          await searchN();
      }
+ 
 
     if (paginador > 4) {
         btnVerMAs.style.display = 'none';
@@ -188,7 +196,7 @@ const fetchLink = async () => {
             gifs.forEach(miGif => {
                 cargarGif(miGif, 'resultsSearch');
             });
-            btnVerMAs.style.display = "flex";
+            btnVerMAs.style.display = "none";
         } else {
 
             noResults.style.display = "block";

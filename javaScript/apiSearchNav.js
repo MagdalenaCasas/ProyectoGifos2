@@ -1,5 +1,8 @@
 const searchInputNav = document.getElementById("nav-search");
-const searchBtnNav = document.querySelector(".nav-search-button")
+const searchBtnNav = document.querySelector(".nav-search-button");
+const navSearchbox = document.querySelector(".nav-search-box");
+const header = document.getElementById("header");
+const txtTrending = document.querySelector(".ContenedorTotalCarrusel")
 
 searchBtnNav.addEventListener("click", (e)=>{
      ulInput.innerHTML = "";
@@ -15,10 +18,24 @@ searchInputNav.addEventListener("keypress",(event)=>{
 }) 
 
 
-/* btnVerMAs.addEventListener("click",(e)=>{
-    //search2Nav()
-    //btnVerMAs.style.display = "none"
+function mostrarSearchNav(){
+    let scrollTop = document.documentElement.scrollTop;
+    let altura = txtTrending.offsetTop;
+    if(altura < scrollTop){
+        navSearchbox.style.display = "block";
+        header.style.position ="fixed"
+        header.style.zIndex=1;
+        searchInputNav.style.background ="transparent";
+        header.style.marginTop = "-45px"
+        
+    }else{
+        navSearchbox.style.display = "none";
+        header.style.position = "";
+        header.style.zIndex="";
+        header.style.marginTop = ""
+    }
+}
 
-}) */
+window.addEventListener("scroll", mostrarSearchNav);
 
 
