@@ -29,14 +29,15 @@ function mostrarSearchNav(){
         searchInputNav.style.background ="transparent";
         header.style.marginTop = "-45px"
         
-    }if(ancho < 700){
-        navSearchbox.style.display = "none"; 
     }else{
         navSearchbox.style.display = "none";
         header.style.position = "";
         header.style.zIndex="";
         header.style.marginTop = ""
     }
+    if(ancho < 700){
+    navSearchbox.style.display = "none";
+    } 
 }
 
 window.addEventListener("scroll", mostrarSearchNav);
