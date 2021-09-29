@@ -123,6 +123,9 @@ header::after{
     height: 3px;
     width: 1.75em;
     border-radius: 3px;
+    body.dark &{
+        background: $blanco;
+    }
 }
 
 .hamburguesa::before{

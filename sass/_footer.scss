@@ -9,6 +9,7 @@ footer{
     border-bottom: 5px solid $violeta;
     body.dark &{
         background: $backgroundModoOscuro;
+        border-bottom: 5px solid $backgroundModoOscuro2;
     }
 }
 

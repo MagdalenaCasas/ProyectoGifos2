@@ -21,6 +21,7 @@ searchInputNav.addEventListener("keypress",(event)=>{
 function mostrarSearchNav(){
     let scrollTop = document.documentElement.scrollTop;
     let altura = txtTrending.offsetTop;
+    let ancho = window.innerWidth;
     if(altura < scrollTop){
         navSearchbox.style.display = "block";
         header.style.position ="fixed"
@@ -28,6 +29,8 @@ function mostrarSearchNav(){
         searchInputNav.style.background ="transparent";
         header.style.marginTop = "-45px"
         
+    }if(ancho < 700){
+        navSearchbox.style.display = "none"; 
     }else{
         navSearchbox.style.display = "none";
         header.style.position = "";

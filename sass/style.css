@@ -418,6 +418,12 @@ body.dark .linea-blanca {
   border-radius: 3px;
 }
 
+body.dark .hamburguesa, body.dark
+.hamburguesa::before, body.dark
+.hamburguesa::after {
+  background: #FFFFFF;
+}
+
 .hamburguesa::before {
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
@@ -524,6 +530,7 @@ footer {
 
 body.dark footer {
   background: #37383C;
+  border-bottom: 5px solid #222326;
 }
 
 .footer-p, .footer-p-c {
