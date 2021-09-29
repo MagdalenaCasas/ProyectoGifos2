@@ -21,30 +21,32 @@ searchInputNav.addEventListener("keypress",(event)=>{
 function mostrarSearchNav(){
     let scrollTop = document.documentElement.scrollTop;
     let altura = txtTrending.offsetTop;
-    const ancho = window.matchMedia('screen and (max-width: 700px)')
-    console.log(ancho)
-    if(ancho){
+    if(altura < scrollTop){
+        console.log("estoy en el if del scroll")
+        navSearchbox.style.display = "block";
+        header.style.position ="fixed"
+        header.style.zIndex=1;
+        searchInputNav.style.background ="transparent";
+        header.style.marginTop = "-45px"
+        
+    }else{
         navSearchbox.style.display = "none";
-        header.style.position ="relative"
-    } else{
-        console.log("estoy en el ancho de compu")
-        if(altura < scrollTop){
-            console.log("estoy en el if del scroll")
-            navSearchbox.style.display = "block";
-            header.style.position ="fixed"
-            header.style.zIndex=1;
-            searchInputNav.style.background ="transparent";
-            header.style.marginTop = "-45px"
-            
-        }else{
-            navSearchbox.style.display = "none";
-            header.style.position = "";
-            header.style.zIndex="";
-            header.style.marginTop = ""
-        }
+        header.style.position = "";
+        header.style.zIndex="";
+        header.style.marginTop = ""
     }
 }
 
-window.addEventListener("scroll", mostrarSearchNav);
+const ancho = window.matchMedia('screen and (max-width: 700px)')
+
+if (ancho.matches){
+    console.log("tamaño celu")
+    navSearchbox.style.display = "none";
+    header.style.position ="relative"
+}else{
+    console.log("tamaño compu")
+    window.addEventListener("scroll", mostrarSearchNav);
+}
+
 
 
